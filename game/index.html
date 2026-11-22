@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nightshade Gallery — a stealth game</title>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<div id="wrap">
+  <header id="hud-top">
+    <div id="hud-title">NIGHTSHADE GALLERY</div>
+    <div id="hud-status">Reach the green EXIT unseen</div>
+    <div id="hud-gems">◆ 0/3</div>
+    <div id="hud-timer">00:00</div>
+  </header>
+  <div id="alert-bar">
+    <span id="hud-alert">UNSEEN</span>
+    <div id="alert-track"><div id="alert-fill"></div></div>
+  </div>
+  <div id="stage">
+    <canvas id="game-canvas" width="1152" height="720"></canvas>
+    <div id="screen-start" class="screen">
+      <h1>NIGHTSHADE GALLERY</h1>
+      <p class="tagline">A stealth game — slip past the watchmen, pocket the gems,<br>reach the green EXIT without being seen.</p>
+      <p class="rules">WASD / arrows — move &nbsp;·&nbsp; Shift — run (loud!)<br>
+      Walk slow and stay out of the yellow cones. Bushes hide you.<br>
+      Running makes noise rings guards come to check.</p>
+      <button id="btn-start" class="big-btn">▶ &nbsp;Sneak in</button>
+      <p class="hint">Enter also starts · R restarts a run</p>
+    </div>
+    <div id="screen-win" class="screen hidden">
+      <h1>OUT CLEAN</h1>
+      <p id="win-stats" class="tagline"></p>
+      <button id="btn-again-win" class="big-btn">↻ &nbsp;Sneak in again</button>
+    </div>
+    <div id="screen-lose" class="screen hidden">
+      <h1>CAUGHT!</h1>
+      <p id="lose-reason" class="tagline"></p>
+      <button id="btn-again-lose" class="big-btn">↻ &nbsp;Try again</button>
+    </div>
+  </div>
+  <footer id="hud-bottom">
+    <span>WASD / arrows move · Shift run (loud) · R restart · 🔊 button toggles sound</span>
+    <span>
+      <button id="btn-sound" class="small-btn">🔊 Sound on</button>
+      <button id="btn-restart" class="small-btn">↻ Restart</button>
+    </span>
+  </footer>
+</div>
+<script type="module" src="./main.js"></script>
+</body>
+</html>
